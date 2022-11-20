@@ -1,14 +1,12 @@
-package net.javaguides.springboot.web;
+package com.example.authenticatingldap;
 
+import com.example.authenticatingldap.service.UserService;
+import com.example.authenticatingldap.dto.UserRegistrationDto;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import net.javaguides.springboot.service.UserService;
-import net.javaguides.springboot.web.dto.UserRegistrationDto;
 
 @Controller
 @RequestMapping("/registration")

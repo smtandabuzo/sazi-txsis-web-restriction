@@ -1,9 +1,9 @@
-package net.javaguides.springboot.service;
+package com.example.authenticatingldap.service;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.stream.Collectors;
-
+import com.example.authenticatingldap.model.Role;
+import com.example.authenticatingldap.model.User;
+import com.example.authenticatingldap.repository.UserRepository;
+import com.example.authenticatingldap.dto.UserRegistrationDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -12,10 +12,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import net.javaguides.springboot.model.Role;
-import net.javaguides.springboot.model.User;
-import net.javaguides.springboot.repository.UserRepository;
-import net.javaguides.springboot.web.dto.UserRegistrationDto;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -25,9 +24,10 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 	
-	public UserServiceImpl(UserRepository userRepository) {
+	public UserServiceImpl(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder) {
 		super();
 		this.userRepository = userRepository;
+		this.passwordEncoder = passwordEncoder;
 	}
 
 	@Override

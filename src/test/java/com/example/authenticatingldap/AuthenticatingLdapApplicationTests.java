@@ -12,7 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ *//*
+
 package com.example.authenticatingldap;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders.*;
@@ -25,10 +26,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders.FormLoginRequestBuilder;
 import org.springframework.test.web.servlet.MockMvc;
 
+*/
 /**
  *
  * @author Rob Winch
- */
+ *//*
+
 @SpringBootTest
 @AutoConfigureMockMvc
 public class AuthenticatingLdapApplicationTests {
@@ -55,3 +58,4 @@ public class AuthenticatingLdapApplicationTests {
 			.andExpect(unauthenticated());
 	}
 }
+*/

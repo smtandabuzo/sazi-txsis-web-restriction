@@ -1,4 +1,4 @@
-package net.javaguides.springboot.web.dto;
+package com.example.authenticatingldap.dto;
 
 public class UserRegistrationDto {
 	private String firstName;

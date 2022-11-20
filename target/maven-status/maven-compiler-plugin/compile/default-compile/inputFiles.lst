@@ -1,3 +1,11 @@
-C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\WebSecurityConfig.java
+C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\service\UserServiceImpl.java
+C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\SecurityConfig.java
+C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\model\User.java
 C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\HomeController.java
 C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\AuthenticatingLdapApplication.java
+C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\dto\UserRegistrationDto.java
+C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\service\UserService.java
+C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\UserRegistrationController.java
+C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\repository\UserRepository.java
+C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\WebConfig.java
+C:\Users\qotoy\Downloads\gs-authenticating-ldap-main\complete\src\main\java\com\example\authenticatingldap\model\Role.java

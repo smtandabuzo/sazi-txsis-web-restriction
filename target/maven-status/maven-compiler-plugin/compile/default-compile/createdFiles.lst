@@ -1,3 +1,11 @@
-com\example\authenticatingldap\AuthenticatingLdapApplication.class
-com\example\authenticatingldap\WebSecurityConfig.class
+com\example\authenticatingldap\model\User.class
+com\example\authenticatingldap\SecurityConfig.class
 com\example\authenticatingldap\HomeController.class
+com\example\authenticatingldap\WebConfig.class
+com\example\authenticatingldap\service\UserService.class
+com\example\authenticatingldap\UserRegistrationController.class
+com\example\authenticatingldap\model\Role.class
+com\example\authenticatingldap\AuthenticatingLdapApplication.class
+com\example\authenticatingldap\repository\UserRepository.class
+com\example\authenticatingldap\dto\UserRegistrationDto.class
+com\example\authenticatingldap\service\UserServiceImpl.class
