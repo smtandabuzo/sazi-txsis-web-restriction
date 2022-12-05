@@ -39,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.logoutSuccessUrl("/login?logout");
 	}
 
-	@Override
+	/*@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth
 			.ldapAuthentication()
@@ -51,6 +51,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.passwordCompare()
 					.passwordEncoder(new BCryptPasswordEncoder())
 					.passwordAttribute("userPassword");
-	}
+	}*/
 
 }
