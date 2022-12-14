@@ -17,29 +17,32 @@ public class TransmissionRoles {
     @Column(name = "ad_unique_number")
     private String adUniqueNumber;
 
-    @Column(name = "ad_first_name")
+    @Column(name = "ad_firstname")
     private String adFirstName;
 
-    @Column(name = "ad_last_name")
-    private String adLastName;
+    @Column(name = "ad_surname")
+    private String adSurname;
     @Column(name = "ad_email_address")
     private String adEmailAddress;
 
     @Column(name = "txsis_role")
     private String txSisRole;
 
-    public TransmissionRoles() {
+    @Column(name = "status")
+    private String status;
 
+    public TransmissionRoles() {
     }
 
-    public TransmissionRoles(Long id, String adAccount, String adUniqueNumber, String adFirstName, String adLastName, String adEmailAddress, String txSisRole) {
+    public TransmissionRoles(Long id, String adAccount, String adUniqueNumber, String adFirstName, String adSurname, String adEmailAddress, String txSisRole, String status) {
         this.id = id;
         this.adAccount = adAccount;
         this.adUniqueNumber = adUniqueNumber;
         this.adFirstName = adFirstName;
-        this.adLastName = adLastName;
+        this.adSurname = adSurname;
         this.adEmailAddress = adEmailAddress;
         this.txSisRole = txSisRole;
+        this.status = status;
     }
 
     public Long getId() {
@@ -74,12 +77,12 @@ public class TransmissionRoles {
         this.adFirstName = adFirstName;
     }
 
-    public String getAdLastName() {
-        return adLastName;
+    public String getAdSurname() {
+        return adSurname;
     }
 
-    public void setAdLastName(String adLastName) {
-        this.adLastName = adLastName;
+    public void setAdSurname(String adSurname) {
+        this.adSurname = adSurname;
     }
 
     public String getAdEmailAddress() {
@@ -96,5 +99,13 @@ public class TransmissionRoles {
 
     public void setTxSisRole(String txSisRole) {
         this.txSisRole = txSisRole;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

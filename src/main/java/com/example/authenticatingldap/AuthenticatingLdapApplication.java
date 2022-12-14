@@ -1,6 +1,9 @@
 package com.example.authenticatingldap;
 
 import com.example.authenticatingldap.core.*;
+import com.example.authenticatingldap.dto.TransmissionRegistrationDto;
+import com.example.authenticatingldap.model.TransmissionRoles;
+import com.example.authenticatingldap.service.TransmissionRolesService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -28,6 +31,21 @@ public class AuthenticatingLdapApplication {
 	@Bean
 	Authenticator authenticator () {
 		return new SpringSecurityAuthenicator(tokenStore());
+	}
+
+	@Bean
+	TransmissionRolesService transmissionRolesService(){
+		return new TransmissionRolesService() {
+			@Override
+			public TransmissionRoles findByAdUniqueNumber(String adUniqueNumber) {
+				return null;
+			}
+
+			@Override
+			public TransmissionRoles save(TransmissionRegistrationDto transmissionRegistrationDto) {
+				return null;
+			}
+		};
 	}
 
 

@@ -1,9 +1,12 @@
-//package com.example.authenticatingldap.service;
+package com.example.authenticatingldap.service;
 
-//import com.example.authenticatingldap.dto.UserLoginDto;
-//import com.example.authenticatingldap.model.TransmissionRoles;
+import com.example.authenticatingldap.dto.TransmissionRegistrationDto;
+import com.example.authenticatingldap.model.TransmissionRoles;
+import org.springframework.stereotype.Service;
 
-//public interface TransmissionRolesService {
-  //  TransmissionRoles findByAdUniqueNumber(String adUniqueNumber);
+@Service
+public interface TransmissionRolesService {
+    TransmissionRoles findByAdUniqueNumber(String adUniqueNumber);
 
-//}
+    TransmissionRoles save(TransmissionRegistrationDto transmissionRegistrationDto);
+}
