@@ -1,9 +1,15 @@
 package com.example.authenticatingldap.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import javax.persistence.*;
 
 //@Entity
 //@Table(name = "transmission_roles", uniqueConstraints = @UniqueConstraint(columnNames = "ad_unique_number"))
+
 public class TransmissionRoles {
 
   //  @Id

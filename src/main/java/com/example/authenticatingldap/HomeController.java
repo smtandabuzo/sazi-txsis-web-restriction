@@ -1,83 +1,31 @@
 package com.example.authenticatingldap;
 
-import com.example.authenticatingldap.core.Authenticator;
-import com.example.authenticatingldap.core.Sender;
-import com.example.authenticatingldap.core.TokenStore;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.core.Authentication;
+import com.example.authenticatingldap.dto.UserLoginDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.unbescape.html.HtmlEscape;
 
 import javax.servlet.http.HttpServletRequest;
-import java.security.Principal;
 import java.sql.*;
-import java.util.Locale;
 
-//@RestController
 @Controller
-//@RequestMapping
-//@RequestMapping("/login")
+@RequestMapping("/login")
 public class HomeController {
 
-	/*private final TokenStore tokenStore;
+	@ModelAttribute("transmission_roles")
+	public UserLoginDto userLoginDto() {
+	    return new UserLoginDto();
+	}
 
-	private final Sender sender;
-
-	private final Authenticator authenticator;
-
-	public HomeController(TokenStore tokenStore, Sender sender, Authenticator authenticator) {
-		this.tokenStore = tokenStore;
-		this.sender = sender;
-		this.authenticator = authenticator;
-	}*/
-
-	//@GetMapping("/")
-	//public String index (Authentication aAuthentication, Model aModel) {
-	//	aModel.addAttribute("auth", aAuthentication);
-	//	return "login";
-	//}
-
-	@GetMapping("/login")
+	@GetMapping
 	public String login () {
 		//return setLogin();
 		return "login";
 	}
-
-	private String setLogin(){
-		Connection connection = null;
-		try {
-			connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/txsis_registration",
-					"root", "");
-
-			PreparedStatement st = (PreparedStatement) connection
-					.prepareStatement("Select txsis_role from txsis_registration.transmission_roles where ad_unique_number=?");
-
-			st.setString(1, "4015899");
-			ResultSet rs = st.executeQuery();
-			if (rs.next()) {
-				return "index";
-				//return "redirect:/index.html";
-			} else {
-				return "login";
-			}
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-	@PostMapping("/login")
-	public String login (@RequestParam("username") String username) {
-
-		// verify that the user is in the database.
-		// ...
-
-		// send sign-in email
-		//String token = tokenStore.create(aEmail);
-		//sender.send(aEmail, token);
-
-		//return "login_link_sent";
+	@PostMapping
+	public String login (@ModelAttribute("transmission_roles") UserLoginDto userLoginDto) {
+		//model.addAttribute("username",adUniqueNumber);
 		System.out.println("Inside login");
 		Connection connection = null;
 		try {
@@ -87,7 +35,7 @@ public class HomeController {
 			PreparedStatement st = (PreparedStatement) connection
 					.prepareStatement("Select txsis_role from txsis_registration.transmission_roles where ad_unique_number=?");
 
-			st.setString(1, username);
+			st.setString(1, userLoginDto.getAdUniqueNumber());
 			ResultSet rs = st.executeQuery();
 			if (rs.next()) {
 				//return "index";
