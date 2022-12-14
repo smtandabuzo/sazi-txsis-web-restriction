@@ -1,37 +1,37 @@
-package com.example.authenticatingldap;
+//package com.example.authenticatingldap;
 
-import com.example.authenticatingldap.service.UserService;
-import com.example.authenticatingldap.dto.UserRegistrationDto;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+//import com.example.authenticatingldap.service.UserService;
+//import com.example.authenticatingldap.dto.UserRegistrationDto;
+//import org.springframework.stereotype.Controller;
+//import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.bind.annotation.ModelAttribute;
+//import org.springframework.web.bind.annotation.PostMapping;
+//import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
-@RequestMapping("/registration")
-public class UserRegistrationController {
+//@Controller
+//@RequestMapping("/registration")
+//public class UserRegistrationController {
 
-	private UserService userService;
+//	private UserService userService;
 
-	public UserRegistrationController(UserService userService) {
-		super();
-		this.userService = userService;
-	}
+//	public UserRegistrationController(UserService userService) {
+//		super();
+//		this.userService = userService;
+//	}
 	
-	@ModelAttribute("user")
-    public UserRegistrationDto userRegistrationDto() {
-        return new UserRegistrationDto();
-    }
+//	@ModelAttribute("user")
+  //  public UserRegistrationDto userRegistrationDto() {
+    //    return new UserRegistrationDto();
+    //}
 	
-	@GetMapping
-	public String showRegistrationForm() {
-		return "registration";
-	}
+	//@GetMapping
+	//public String showRegistrationForm() {
+	//	return "registration";
+	//}
 	
-	@PostMapping
-	public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto registrationDto) {
-		userService.save(registrationDto);
-		return "redirect:/registration?success";
-	}
-}
+	//@PostMapping
+	//public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto registrationDto) {
+	//	userService.save(registrationDto);
+	//	return "redirect:/registration?success";
+	//}
+//}

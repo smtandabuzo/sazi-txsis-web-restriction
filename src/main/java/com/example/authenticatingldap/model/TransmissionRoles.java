@@ -2,73 +2,43 @@ package com.example.authenticatingldap.model;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "TRANSMISSION_ROLES", uniqueConstraints = @UniqueConstraint(columnNames = "AD_UNIQUE_NUMBER"))
+//@Entity
+//@Table(name = "transmission_roles", uniqueConstraints = @UniqueConstraint(columnNames = "ad_unique_number"))
 public class TransmissionRoles {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+  //  @Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "AD_ACCOUNT")
+    //@Column(name = "ad_account")
     private String adAccount;
 
-    @Column(name = "AD_UNIQUE_NUMBER")
+    //@Column(name = "ad_unique_number")
     private String adUniqueNumber;
 
-    @Column(name = "AD_NAME")
-    private String adName;
+    //@Column(name = "ad_first_name")
+    private String adFirstName;
 
-    @Column(name = "AD_EMAIL_ADDRESS")
+    //@Column(name = "ad_last_name")
+    private String adLastName;
+    //@Column(name = "ad_email_address")
     private String adEmailAddress;
 
-    @Column(name = "AD_ROLE")
-    private String adRole;
-
-    @Column(name = "BLOCKING_INDICATOR_SAP")
-    private String blockingIndicatorSAP;
-
-    @Column(name = "ACCOUNT")
-    private String account;
-
-    @Column(name = "AC_UNIQUE_NUMBER")
-    private String acUniqueNumber;
-
-    @Column(name = "AC_NAME")
-    private String acName;
-
-    @Column(name = "AC_EMAIL_ADDRESS")
-    private String acEmailAddress;
-
-    @Column(name = "AC_ROLE")
-    private String acRole;
-
-    @Column(name = "VALID")
-    private String valid;
-
-    @Column(name = "BLOCKING_INDICATOR_IDV")
-    private String blockingIndicatorIDV;
+    //@Column(name = "txsis_role")
+    private String txSisRole;
 
     public TransmissionRoles() {
 
     }
 
-    public TransmissionRoles(Long id, String adAccount, String adUniqueNumber, String adName, String adEmailAddress, String adRole, String blockingIndicatorSAP, String account,
-                             String acUniqueNumber, String acName, String acEmailAddress, String acRole, String valid, String blockingIndicatorIDV) {
+    public TransmissionRoles(Long id, String adAccount, String adUniqueNumber, String adFirstName, String adLastName, String adEmailAddress, String txSisRole) {
         this.id = id;
         this.adAccount = adAccount;
         this.adUniqueNumber = adUniqueNumber;
-        this.adName = adName;
+        this.adFirstName = adFirstName;
+        this.adLastName = adLastName;
         this.adEmailAddress = adEmailAddress;
-        this.adRole = adRole;
-        this.blockingIndicatorSAP = blockingIndicatorSAP;
-        this.account = account;
-        this.acUniqueNumber = acUniqueNumber;
-        this.acName = acName;
-        this.acEmailAddress = acEmailAddress;
-        this.acRole = acRole;
-        this.valid = valid;
-        this.blockingIndicatorIDV = blockingIndicatorIDV;
+        this.txSisRole = txSisRole;
     }
 
     public Long getId() {
@@ -95,12 +65,20 @@ public class TransmissionRoles {
         this.adUniqueNumber = adUniqueNumber;
     }
 
-    public String getAdName() {
-        return adName;
+    public String getAdFirstName() {
+        return adFirstName;
     }
 
-    public void setAdName(String adName) {
-        this.adName = adName;
+    public void setAdFirstName(String adFirstName) {
+        this.adFirstName = adFirstName;
+    }
+
+    public String getAdLastName() {
+        return adLastName;
+    }
+
+    public void setAdLastName(String adLastName) {
+        this.adLastName = adLastName;
     }
 
     public String getAdEmailAddress() {
@@ -111,75 +89,11 @@ public class TransmissionRoles {
         this.adEmailAddress = adEmailAddress;
     }
 
-    public String getAdRole() {
-        return adRole;
+    public String getTxSisRole() {
+        return txSisRole;
     }
 
-    public void setAdRole(String adRole) {
-        this.adRole = adRole;
-    }
-
-    public String getBlockingIndicatorSAP() {
-        return blockingIndicatorSAP;
-    }
-
-    public void setBlockingIndicatorSAP(String blockingIndicatorSAP) {
-        this.blockingIndicatorSAP = blockingIndicatorSAP;
-    }
-
-    public String getAccount() {
-        return account;
-    }
-
-    public void setAccount(String account) {
-        this.account = account;
-    }
-
-    public String getAcUniqueNumber() {
-        return acUniqueNumber;
-    }
-
-    public void setAcUniqueNumber(String acUniqueNumber) {
-        this.acUniqueNumber = acUniqueNumber;
-    }
-
-    public String getAcName() {
-        return acName;
-    }
-
-    public void setAcName(String acName) {
-        this.acName = acName;
-    }
-
-    public String getAcEmailAddress() {
-        return acEmailAddress;
-    }
-
-    public void setAcEmailAddress(String acEmailAddress) {
-        this.acEmailAddress = acEmailAddress;
-    }
-
-    public String getAcRole() {
-        return acRole;
-    }
-
-    public void setAcRole(String acRole) {
-        this.acRole = acRole;
-    }
-
-    public String getValid() {
-        return valid;
-    }
-
-    public void setValid(String valid) {
-        this.valid = valid;
-    }
-
-    public String getBlockingIndicatorIDV() {
-        return blockingIndicatorIDV;
-    }
-
-    public void setBlockingIndicatorIDV(String blockingIndicatorIDV) {
-        this.blockingIndicatorIDV = blockingIndicatorIDV;
+    public void setTxSisRole(String txSisRole) {
+        this.txSisRole = txSisRole;
     }
 }

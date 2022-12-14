@@ -1,7 +1,9 @@
-package com.example.authenticatingldap.service;
+//package com.example.authenticatingldap.service;
 
-import org.springframework.security.core.userdetails.User;
+//import com.example.authenticatingldap.dto.UserLoginDto;
+//import com.example.authenticatingldap.model.TransmissionRoles;
 
-public interface TransmissionRolesService {
-    User findByAdUniqueNumber(String adUniqueNumber);
-}
+//public interface TransmissionRolesService {
+  //  TransmissionRoles findByAdUniqueNumber(String adUniqueNumber);
+
+//}
