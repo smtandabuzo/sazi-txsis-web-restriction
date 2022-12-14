@@ -38,8 +38,8 @@ public class HomeController {
 			st.setString(1, userLoginDto.getAdUniqueNumber());
 			ResultSet rs = st.executeQuery();
 			if (rs.next()) {
-				//return "index";
-				return "redirect:/index.html";
+				return "index";
+				//return "redirect:/index.html";
 			} else {
 				return "login";
 			}

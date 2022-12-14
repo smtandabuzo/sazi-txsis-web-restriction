@@ -1,36 +1,31 @@
 package com.example.authenticatingldap.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-
 import javax.persistence.*;
 
-//@Entity
-//@Table(name = "transmission_roles", uniqueConstraints = @UniqueConstraint(columnNames = "ad_unique_number"))
+@Entity
+@Table(name = "transmission_roles", uniqueConstraints = @UniqueConstraint(columnNames = "ad_unique_number"))
 
 public class TransmissionRoles {
 
-  //  @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //@Column(name = "ad_account")
+    @Column(name = "ad_account")
     private String adAccount;
 
-    //@Column(name = "ad_unique_number")
+    @Column(name = "ad_unique_number")
     private String adUniqueNumber;
 
-    //@Column(name = "ad_first_name")
+    @Column(name = "ad_first_name")
     private String adFirstName;
 
-    //@Column(name = "ad_last_name")
+    @Column(name = "ad_last_name")
     private String adLastName;
-    //@Column(name = "ad_email_address")
+    @Column(name = "ad_email_address")
     private String adEmailAddress;
 
-    //@Column(name = "txsis_role")
+    @Column(name = "txsis_role")
     private String txSisRole;
 
     public TransmissionRoles() {
