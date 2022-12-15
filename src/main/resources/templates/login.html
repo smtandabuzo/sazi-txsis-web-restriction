@@ -38,9 +38,12 @@
             <h1> User Login Page </h1>
             <form th:action="@{/login/}" th:object="${transmission_roles}" method="post">
 
-                <div th:if="${param.error}">
+                <!--<div th:if="${param.error}">
                     <div class="alert alert-danger">Invalid user credentials.</div>
-                </div>
+                </div>-->
+                <!--<div th:if="${#fields.hasErrors('username')}">
+                    <div class="alert alert-danger">Invalid user credentials.</div>
+                </div>-->
 
                 <div th:if="${param.logout}">
                     <div class="alert alert-info">You have been logged out.</div>
@@ -72,6 +75,16 @@
 						<span><a href="/" th:href="@{/registration}">Register
 								new user</a></span>
             </div>
+            <form th:action="@{/welcome/}">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit" name="back" id="back"
+                                   class="form-control btn btn-primary" value="Back" />
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>

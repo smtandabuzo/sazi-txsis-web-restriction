@@ -34,9 +34,9 @@
 <div class = "container">
     <div class = "row">
         <div class = "col-md-6 col-md-offset-3">
-            <h1> You do not have sufficient permissions </h1>
+            <h1> You do not have rights to access the application. Please check your credentials </h1>
             <div class="form-group">
-                <span><a sec:authorize="hasRole('USER')" th:href="@{/login}">Back to previous page</a></span>
+                <span><a th:href="@{/welcome}">Back to previous page</a></span>
             </div>
         </div>
     </div>

@@ -19,11 +19,7 @@ public class HomeController {
 	    return new UserLoginDto();
 	}
 
-
-
 	private int id;
-
-	// Constructors and other variables and methods deleted for clarity
 
 	public long getId() {
 		return id;
@@ -39,8 +35,6 @@ public class HomeController {
 	}
 	@PostMapping
 	public String login (@ModelAttribute("transmission_roles") UserLoginDto userLoginDto) {
-		//model.addAttribute("username",adUniqueNumber);
-		System.out.println("Inside login");
 
 		Connection connection = null;
 		try {
@@ -52,14 +46,13 @@ public class HomeController {
 
 			st.setString(1, userLoginDto.getAdUniqueNumber());
 			ResultSet rs = st.executeQuery();
-			//int count = 0;
+
 			if (rs.next()) {
 				String role = rs.getString("role");
-				if (role.equals("ADMIN") && getId() == 0){
-					setId(id++);
-					return "login";
-				} else {
+				if (role.equals("ADMIN")) {
 					return "index";
+				}else if(role.equals("USER")){
+				    return "index";
 				}
 			} else {
 				return "restrict";
@@ -67,13 +60,11 @@ public class HomeController {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
+		return "welcome";
 	}
 
 	@GetMapping("/")
-	//@RequestMapping("/")
 	public String home() {
-	//public String root(Locale locale) {
-		//return "index";
 		return "redirect:/login.html";
 	}
 

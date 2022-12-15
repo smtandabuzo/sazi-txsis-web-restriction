@@ -29,7 +29,7 @@ public class TransmissionRolesServiceImpl implements TransmissionRolesService{
     public TransmissionRoles save(TransmissionRegistrationDto transmissionRegistrationDto) {
         TransmissionRoles transmissionRoles = new TransmissionRoles(transmissionRegistrationDto.getId(),transmissionRegistrationDto.getAdAccount(),transmissionRegistrationDto.getAdUniqueNumber(),
                 transmissionRegistrationDto.getAdFirstName(),transmissionRegistrationDto.getAdSurname(),transmissionRegistrationDto.getAdEmailAddress(),
-                transmissionRegistrationDto.getTxsisRole(),transmissionRegistrationDto.getStatus());
+                transmissionRegistrationDto.getTxsisRole(),transmissionRegistrationDto.getStatus(),transmissionRegistrationDto.getRole());
 
 		return transmissionRoleRepository.save(transmissionRoles);
     }

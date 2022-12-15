@@ -31,10 +31,14 @@ public class TransmissionRoles {
     @Column(name = "status")
     private String status;
 
+    @Column(name = "role")
+    private String role;
+
     public TransmissionRoles() {
     }
 
-    public TransmissionRoles(Long id, String adAccount, String adUniqueNumber, String adFirstName, String adSurname, String adEmailAddress, String txSisRole, String status) {
+    public TransmissionRoles(Long id, String adAccount, String adUniqueNumber, String adFirstName, String adSurname,
+                             String adEmailAddress, String txSisRole, String status, String role) {
         this.id = id;
         this.adAccount = adAccount;
         this.adUniqueNumber = adUniqueNumber;
@@ -43,6 +47,7 @@ public class TransmissionRoles {
         this.adEmailAddress = adEmailAddress;
         this.txSisRole = txSisRole;
         this.status = status;
+        this.role = role;
     }
 
     public Long getId() {
@@ -107,5 +112,13 @@ public class TransmissionRoles {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

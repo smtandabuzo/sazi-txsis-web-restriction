@@ -12,6 +12,8 @@ public class TransmissionRegistrationDto {
 
 	private String status;
 
+	private String role;
+
 	public TransmissionRegistrationDto() {
 	}
 
@@ -77,5 +79,13 @@ public class TransmissionRegistrationDto {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 }
