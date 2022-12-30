@@ -86,9 +86,48 @@
 					</div>
 
 					<div class="form-group">
+						<label class="control-label" for="role"> Role </label> <input
+							id="role" class="form-control" th:field="*{role}" required
+							autofocus="autofocus" />
+					</div>
+
+					<div class="form-group">
 						<button type="submit" class="btn btn-success">Register</button>
 						<span>Already registered? <a href="/" th:href="@{/login}">Login
 								here</a></span>
+					</div>
+				</form>
+				<form action="">
+					<table>
+						<tr>
+						<th>AD Account</th>
+						<th>AD Unique Number</th>
+						<th>AD First Name</th>
+						<th>AD Surname</th>
+						<th>AD Email Address</th>
+						<th>TxSIS Role</th>
+						<th>Status</th>
+						<th>Role</th>
+						<th>Block</th>
+						</tr>
+						<tr th:if="${#lists.isEmpty(transmission_roles)}">
+							<td colspan="7">No Records found. Add some...!</td>
+						</tr>
+						<tr th:each="transmission_roles : ${transmission_roles}">
+							<td th:text="${transmission_roles.adAccount}"></td>
+							<td th:text="${transmission_roles.adUniqueNumber}"></td>
+							<td th:text="${transmission_roles.adFirstName}"></td>
+							<td th:text="${transmission_roles.adSurname}"></td>
+							<td th:text="${transmission_roles.adEmailAddress}"></td>
+							<td th:text="${transmission_roles.txsisRole}"></td>
+							<td th:text="${transmission_roles.status}"></td>
+							<td th:text="${transmission_roles.role}"></td>
+							<td th:text="${transmission_roles.block}"></td>
+							<!--<td><a th:href="'/' + ${transmission_roles.id}">?</a></td>-->
+						</tr>
+					</table>
+					<div class="form-group">
+						<button type="submit" class="btn btn-success">Block / Unblock</button>
 					</div>
 				</form>
 			</div>

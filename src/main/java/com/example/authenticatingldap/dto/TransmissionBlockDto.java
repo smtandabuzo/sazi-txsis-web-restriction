@@ -1,6 +1,6 @@
 package com.example.authenticatingldap.dto;
 
-public class TransmissionRegistrationDto {
+public class TransmissionBlockDto {
 
 	private Long id;
 	private String adAccount;
@@ -24,7 +24,7 @@ public class TransmissionRegistrationDto {
 		this.block = block;
 	}
 
-	public TransmissionRegistrationDto() {
+	public TransmissionBlockDto() {
 	}
 
 	public Long getId() {
